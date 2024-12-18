@@ -37,7 +37,7 @@ on:
 env:
   PROJECT_ID: 'boxwood-sector-441703-p1' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
-  SERVICE: 'my-service' # TODO: update to your service name
+  SERVICE: 'react' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/802881921382/locations/global/workloadIdentityPools/my-pool/providers/github' # TODO: update to your workload identity provider
   REPO: 'assignment'
 
