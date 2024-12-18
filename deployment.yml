@@ -4,97 +4,16 @@ metadata:
   annotations:
     autopilot.gke.io/resource-adjustment: '{"input":{"containers":[{"name":"react-sha256-1"}]},"output":{"containers":[{"limits":{"ephemeral-storage":"1Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"react-sha256-1"}]},"modified":true}'
     autopilot.gke.io/warden-version: 3.0.42
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "8"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"autopilot.gke.io/resource-adjustment":"{\"input\":{\"containers\":[{\"name\":\"react-sha256-1\"}]},\"output\":{\"containers\":[{\"limits\":{\"ephemeral-storage\":\"1Gi\"},\"requests\":{\"cpu\":\"500m\",\"ephemeral-storage\":\"1Gi\",\"memory\":\"2Gi\"},\"name\":\"react-sha256-1\"}]},\"modified\":true}","autopilot.gke.io/warden-version":"3.0.42","deployment.kubernetes.io/revision":"3"},"creationTimestamp":"2024-12-18T12:23:02Z","generation":5,"labels":{"app":"deployment-1"},"name":"deployment-1","namespace":"default","resourceVersion":"300804","uid":"9bc61583-19e7-4b7b-bc87-3a6bb8b44809"},"spec":{"progressDeadlineSeconds":600,"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"app":"deployment-1"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"deployment-1"}},"spec":{"containers":[{"image":"us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/react@sha256:1276159163b61c9309cdba58ad38f9ac6d792043857a26e4e17b6a23382c97aa","imagePullPolicy":"IfNotPresent","name":"react-sha256-1","resources":{"limits":{"ephemeral-storage":"1Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"}},"securityContext":{"capabilities":{"drop":["NET_RAW"]}},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File"}],"dnsPolicy":"ClusterFirst","restartPolicy":"Always","schedulerName":"default-scheduler","securityContext":{"seccompProfile":{"type":"RuntimeDefault"}},"terminationGracePeriodSeconds":30,"tolerations":[{"effect":"NoSchedule","key":"kubernetes.io/arch","operator":"Equal","value":"amd64"}]}}},"status":{"availableReplicas":1,"conditions":[{"lastTransitionTime":"2024-12-18T12:23:27Z","lastUpdateTime":"2024-12-18T12:23:27Z","message":"Deployment has minimum availability.","reason":"MinimumReplicasAvailable","status":"True","type":"Available"},{"lastTransitionTime":"2024-12-18T17:29:30Z","lastUpdateTime":"2024-12-18T17:29:31Z","message":"ReplicaSet \"deployment-1-6648dd66b8\" is progressing.","reason":"ReplicaSetUpdated","status":"True","type":"Progressing"}],"observedGeneration":5,"readyReplicas":1,"replicas":2,"unavailableReplicas":1,"updatedReplicas":1}}
   creationTimestamp: "2024-12-18T12:23:02Z"
-  generation: 3
+  generation: 11
   labels:
     app: deployment-1
-  managedFields:
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:spec:
-        f:replicas: {}
-    manager: vpa-recommender
-    operation: Update
-    subresource: scale
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:labels:
-          .: {}
-          f:app: {}
-      f:spec:
-        f:progressDeadlineSeconds: {}
-        f:revisionHistoryLimit: {}
-        f:selector: {}
-        f:strategy:
-          f:rollingUpdate:
-            .: {}
-            f:maxSurge: {}
-            f:maxUnavailable: {}
-          f:type: {}
-        f:template:
-          f:metadata:
-            f:labels:
-              .: {}
-              f:app: {}
-          f:spec:
-            f:containers:
-              k:{"name":"react-sha256-1"}:
-                .: {}
-                f:image: {}
-                f:imagePullPolicy: {}
-                f:name: {}
-                f:resources: {}
-                f:terminationMessagePath: {}
-                f:terminationMessagePolicy: {}
-            f:dnsPolicy: {}
-            f:restartPolicy: {}
-            f:schedulerName: {}
-            f:securityContext: {}
-            f:terminationGracePeriodSeconds: {}
-    manager: unknown
-    operation: Update
-    time: "2024-12-18T12:23:02Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:availableReplicas: {}
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2024-12-18T12:30:04Z"
   name: deployment-1
   namespace: default
-  resourceVersion: "28615"
+  resourceVersion: "354811"
   uid: 9bc61583-19e7-4b7b-bc87-3a6bb8b44809
 spec:
   progressDeadlineSeconds: 600
@@ -110,12 +29,14 @@ spec:
     type: RollingUpdate
   template:
     metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2024-12-18T17:49:35Z"
       creationTimestamp: null
       labels:
         app: deployment-1
     spec:
       containers:
-      - image: us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/react:${GITHUB_SHA}
+      - image: us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/react:c22216b6e154419577bbc4e1ce394eb6959cfb11
         imagePullPolicy: IfNotPresent
         name: react-sha256-1
         resources:
@@ -152,13 +73,13 @@ status:
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2024-12-18T12:23:02Z"
-    lastUpdateTime: "2024-12-18T12:23:27Z"
-    message: ReplicaSet "deployment-1-78dbd4746c" has successfully progressed.
+  - lastTransitionTime: "2024-12-18T18:28:05Z"
+    lastUpdateTime: "2024-12-18T18:28:35Z"
+    message: ReplicaSet "deployment-1-85c7d799c7" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  observedGeneration: 3
+  observedGeneration: 11
   readyReplicas: 1
   replicas: 1
   updatedReplicas: 1
