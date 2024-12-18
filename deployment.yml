@@ -115,7 +115,7 @@ spec:
         app: deployment-1
     spec:
       containers:
-      - image: us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/react@sha256:585107d854804a64cf8552a3a1da1c74bb59ce84be64a677aa98fcebb256340e
+      - image: us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/react:${GITHUB_SHA}
         imagePullPolicy: IfNotPresent
         name: react-sha256-1
         resources:
