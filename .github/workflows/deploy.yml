@@ -43,7 +43,7 @@ env:
   PROJECT_ID: 'boxwood-sector-441703-p1' # TODO: update to your Google Cloud project ID
   GAR_LOCATION: 'us-central1' # TODO: update to your region
   GKE_CLUSTER: 'assignment-cluster' # TODO: update to your cluster name
-  GKE_ZONE: 'us-central1-a' # TODO: update to your cluster zone
+  GKE_ZONE: 'us-central1' # TODO: update to your cluster zone
   DEPLOYMENT_NAME: 'deployment-1' # TODO: update to your deployment name
   REPOSITORY: 'assignment' # TODO: update to your Artifact Registry docker repository name
   IMAGE: 'react'
