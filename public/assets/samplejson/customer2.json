@@ -1,12 +1,12 @@
 {
 	"id": 2,
-	"name": "ABCD",
-	"email": "abcd@test.com",
+	"name": "Michael Scott",
+	"email": "michaelscott@dundermifflin.com",
 	"phone": "987654321",
-	"city": "Mangalore",
-	"state": "karnataka",
-	"country": "India",
-	"organization": "Company 2",
-	"jobProfile": "Software Developer",
+	"city": "Scranton",
+	"state": "PA",
+	"country": "USA",
+	"organization": "Dunder Mifflin",
+	"jobProfile": "General Manager",
 	"additionalInfo": "Buys Products Rarely"
 }

@@ -1,12 +1,12 @@
 {
 	"id": 3,
-	"name": "Tyrion",
-	"email": "tyrion@test.com",
+	"name": "Harry Potter",
+	"email": "Harry@test.com",
 	"phone": "123412345",
-	"city": "Chennai",
-	"state": "Tamil Nadu",
-	"country": "India",
-	"organization": "Company 3",
-	"jobProfile": "Software Developer",
-	"additionalInfo": "Buys Lots of Products in general"
+	"city": "London",
+	"state": "England",
+	"country": "United Kingdom",
+	"organization": "Gryffindor",
+	"jobProfile": "Wizard",
+	"additionalInfo": "NA"
 }
