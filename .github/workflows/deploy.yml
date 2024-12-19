@@ -118,5 +118,5 @@ jobs:
       # Deploy the Docker image to the GKE cluster
       - name: 'Deploy to GKE'
         run: |-
-          kubectl set image deployment/$DEPLOYMENT_NAME react-sha256-1=${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${GITHUB_SHA}
+          kubectl set image deployment/$DEPLOYMENT_NAME react-sha256-1=${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}@sha256:${GITHUB_SHA}
 
