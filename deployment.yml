@@ -24,7 +24,7 @@ spec:
         - name: frontend
           image: "us-central1-docker.pkg.dev/boxwood-sector-441703-p1/assignment/streamlit@sha256:691c1cdc536312a5192c847609c6160f540cfd2b2286423e635d3f3b14bbbb48"
           ports:
-            - containerPort:80
+            - containerPort: 80
           resources:
             requests:
               memory: "0.5Gi"
@@ -33,4 +33,4 @@ spec:
               memory: "0.5Gi"
               cpu: "200m"
       nodeSelector:
-        type: application            
+        type: application
