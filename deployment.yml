@@ -33,4 +33,5 @@ spec:
               memory: "0.5Gi"
               cpu: "200m"
       nodeSelector:
+        cloud.google.com/compute-class: "e2-medium"  # Cheap compute class
         cloud.google.com/gke-ephemeral-storage-local-ssd: "true"
