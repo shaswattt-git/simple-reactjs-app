@@ -33,4 +33,4 @@ spec:
               memory: "0.5Gi"
               cpu: "200m"
       nodeSelector:
-        type: application
+        cloud.google.com/gke-ephemeral-storage-local-ssd: "true"
